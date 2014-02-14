@@ -1,0 +1,57 @@
+
+// SIZING
+//
+
+$container-width: 94%;
+$container-max-width: 1200px;
+
+// SPACING UNITS
+//
+
+$xx-large-unit:   38px;
+$x-large-unit:    32px;
+$large-unit:      24px;
+$default-unit:    16px;
+$small-unit:      12px;
+$x-small-unit:    8px;
+$xx-small-unit:   4px;
+
+// GUTTERS
+//
+
+$large-gutter:    $large-unit;
+$gutter:          $default-unit;
+$small-gutter:    $x-small-unit;
+
+$desktop-gutters: $gutter;
+
+$site-gutters:
+  (large, $large-gutter),
+  (medium, $gutter),
+  (small, $small-gutter)
+;
+
+// BREAKPOINTS
+//
+
+$breakpoint-big:     1200px;
+$breakpoint-medium:  800px;
+$breakpoint-small:   500px;
+
+$site-breakpoints:
+  (big, $breakpoint-big),
+  (medium, $breakpoint-medium),
+  (small, $breakpoint-small)
+;
+
+// COLORUS
+//
+
+$light-grey:        #ddd;
+$grey:              #ccc;
+$blue:              #0000ff;
+$dark-blue:         darken($blue,10);
+
+$background-color:  $light-grey;
+$link-color:        $blue;
+$link-color-hover:  $dark-blue;
