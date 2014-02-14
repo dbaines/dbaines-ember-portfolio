@@ -1,14 +1,11 @@
 @import "settings";
+@import "utilities/font";
 @import "utilities/color-link";
 @import "utilities/decorate-link";
-@import "utilities/reset";
 @import "utilities/media-query";
+@import "utilities/reset";
 @import "utilities/spang";
 @import "components/layout";
 @import "components/portfolio";
 @import "components/footer";
-
-// EMBER AUTORELOAD
-@keyframes domChanged { from { background: yellow; } }
-@-webkit-keyframes domChanged { from { background: yellow; } }
-.ember-view { animation: domChanged 1s; -webkit-animation: domChanged 1s; }
+@import "components/transition-to";

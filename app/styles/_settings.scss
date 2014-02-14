@@ -5,6 +5,12 @@
 $container-width: 94%;
 $container-max-width: 1200px;
 
+// FONT STACKS
+//
+
+$body-font:      ('Roboto Slab', serif), normal, 400;
+$bold-font:      ('Roboto Slab', serif), normal, 700;
+
 // SPACING UNITS
 //
 
@@ -47,11 +53,15 @@ $site-breakpoints:
 // COLORUS
 //
 
+$white:             #f6f6f6;
+
 $light-grey:        #ddd;
 $grey:              #ccc;
+$dark-grey:         #222;
+
 $blue:              #0000ff;
 $dark-blue:         darken($blue,10);
 
 $background-color:  $light-grey;
 $link-color:        $blue;
-$link-color-hover:  $dark-blue;
+$link-hover:        $dark-blue;

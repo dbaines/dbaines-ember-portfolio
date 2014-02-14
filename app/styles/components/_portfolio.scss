@@ -1,0 +1,60 @@
+@import "compass/css3/box-shadow";
+@import "compass/css3/transition";
+
+$portfolio-gutter: 1px;
+
+// Portfolio filter selection
+.portfolio-nav {
+  ul {
+    text-align: center;
+    @include pie-clearfix;
+    margin-bottom: $portfolio-gutter;
+  }
+
+  li {
+    width: 50%;
+    float: left;
+  }
+
+  li + li {
+    padding-left: $portfolio-gutter;
+  }
+
+  li:first-child a {
+    float: right;
+  }
+
+  li:last-child a {
+    float: left;
+  }
+
+  a {
+    display: block;
+    padding: $x-small-unit $default-unit;
+    background: $grey;
+  }
+}
+
+.portfolio {
+
+  ul {
+    @include pie-clearfix;
+    clear: both;
+    margin: $portfolio-gutter;
+  }
+
+  li {
+    float: left;
+    width: 25%;
+    padding: $portfolio-gutter $portfolio-gutter $portfolio-gutter 0;
+  }
+
+}
+
+.portfolio--tile {
+  display: block;
+  background: $dark-grey;
+  color: $white;
+  height: 200px;
+  @include transition(all .8s);
+}

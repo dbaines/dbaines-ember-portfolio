@@ -45,6 +45,15 @@ Mixins
   }
 }
 
+@mixin row-v(){
+  @each $gutter in $site-gutters {
+    @include media-query(nth($gutter, 1)) {
+      margin-top: -(nth($gutter, 2) * .5);
+      margin-bottom: -(nth($gutter, 2) * .5);
+    }
+  }
+}
+
 /* Generate Responsive Gutters */
 
 @mixin guttersGenerate($gutterSize) {
@@ -57,6 +66,20 @@ Mixins
   @each $gutter in $site-gutters {
     @include media-query(nth($gutter, 1)) {
       @include guttersGenerate(nth($gutter, 2));
+    }
+  }
+}
+
+@mixin gutters-v($gutterOveride: false) {
+  @if $gutterOveride != false {
+    padding-top: $gutterOveride * .5;
+    padding-bottom: $gutterOveride * .5;
+  } @else {
+    @each $gutter in $site-gutters {
+      @include media-query(nth($gutter, 1)) {
+        padding-top: nth($gutter, 2) * .5;
+        padding-bottom: nth($gutter, 2) * .5;
+      }
     }
   }
 }

@@ -1,0 +1,7 @@
+@import "compass/css3/transform";
+
+.transition-to-project {
+  .portfolio--tile {
+    @include transform(scale(-0.001));
+  }
+}
