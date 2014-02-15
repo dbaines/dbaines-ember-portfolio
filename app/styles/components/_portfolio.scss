@@ -237,18 +237,8 @@ $portfolio-stacked-gutter: 10px;
   }
 
   .portfolio--description {
-    font-size: 1.1em;
-    line-height: 1.8em;
     @include columns(20em 2);
     @include column-gap($default-unit);
-
-    @include media-query(small) {
-      font-size: 1em;
-    }
-
-    p {
-      margin-bottom: 0.5em;
-    }
   }
 
 }

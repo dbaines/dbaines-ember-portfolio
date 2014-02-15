@@ -1,0 +1,12 @@
+.content {
+  font-size: 1.1em;
+  line-height: 1.8em;
+
+  @include media-query(small) {
+    font-size: 1em;
+  }
+
+  p {
+    margin-bottom: 0.5em;
+  }
+}

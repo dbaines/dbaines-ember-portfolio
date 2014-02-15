@@ -7,7 +7,7 @@
   </div>
   <div class="portfolio--container">
     <div class="portfolio--images">
-      <div class="fotorama" data-width="100%" data-nav="thumbs" data-loop="true" data-max-height="800" data-fit="scaledown" data-arrows="false">
+      <div class="fotorama" data-width="100%" data-nav="thumbs" data-loop="true" data-max-height="800" data-fit="scaledown" data-arrows="false" data-allowfullscreen="true">
         {{#if image_src}}
           <img {{bind-attr src=imagePath}} />
         {{/if}}
@@ -24,7 +24,7 @@
       </div>
     {{/if}}
     {{#if description}}
-      <div class="portfolio--description">
+      <div class="portfolio--description content">
         {{{description}}}
       </div>
     {{/if}}
