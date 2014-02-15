@@ -6,7 +6,6 @@
 
 @mixin media-query($media-query, $size: max){
 
-
   @if $media-query == big {
     @media only screen and (max-width:$breakpoint-big) { @content; }
   }

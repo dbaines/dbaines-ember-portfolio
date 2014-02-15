@@ -88,6 +88,26 @@ Projects.FIXTURES = [
     images: null
   },
   {
+    id: "co-opp",
+    title: "Co-Opp",
+    tags: "wordpress events engine",
+    description: null,
+    image_src: "co-opp.jpg"
+  },
+  {
+    id: "what-style-am-i",
+    title: "What Style Am I?",
+    tags: "website",
+    description: "Interactive quizz for Beaumont Tiles",
+    image_src: "what_style_01.jpg",
+    images: [
+      "/assets/projects/what_style_02.jpg",
+      "/assets/projects/what_style_03.jpg",
+      "/assets/projects/what_style_04.jpg",
+      "/assets/projects/what_style_05.jpg"
+    ]
+  },
+  {
     id: "demon-soul",
     title: "Demon Soul",
     tags: "motion",

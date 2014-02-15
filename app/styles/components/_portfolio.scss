@@ -54,6 +54,14 @@ $portfolio-gutter: 1px;
     float: left;
     width: 25%;
     padding: $portfolio-gutter $portfolio-gutter 0 0;
+
+    @include media-query(medium) {
+      width: 50%;
+    }
+
+    @include media-query(small) {
+      width: 100%;
+    }
   }
 
 }
@@ -84,13 +92,15 @@ $portfolio-gutter: 1px;
     display: none;
     vertical-align: middle;
 
+    strong,small {
+      display: block;
+    }
+
     strong {
       font-size: 2em;
       @include font($bold-font);
-    }
-
-    strong,small {
-      display: block;
+      line-height: 0.8em;
+      margin-bottom: 6px;
     }
 
     small {
