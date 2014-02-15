@@ -58,11 +58,12 @@ $site-breakpoints:
 $white:             #f6f6f6;
 
 $light-grey:        #ddd;
-$grey:              #ccc;
+$grey:              #5d5d5d;
 $dark-grey:         #222;
 
-$blue:              #0000ff;
-$dark-blue:         darken($blue,10);
+$light-blue:        #6c98c5;
+$blue:              darken($light-blue,15);
+$dark-blue:         darken($light-blue,30);
 
 $foreground-color:  #222;
 $background-color:  $light-grey;

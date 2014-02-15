@@ -98,7 +98,9 @@ Projects.FIXTURES = [
     id: "what-style-am-i",
     title: "What Style Am I?",
     tags: "website",
-    description: "Interactive quizz for Beaumont Tiles",
+    description:
+      "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, tempora, ex maiores nisi rem itaque dolor alias sed illo nulla eius quos officia non ipsum labore voluptatibus at sint.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, tempora, ex maiores nisi rem itaque dolor alias sed illo nulla eius quos officia non ipsum labore voluptatibus at sint.</p>"
+    ,
     image_src: "what_style_01.jpg",
     images: [
       "/assets/projects/what_style_02.jpg",

@@ -9,7 +9,10 @@
     display: inline-block;
     width: 20px;
     height: 20px;
-    background: #bada55;
-    text-indent: -9999px;
+    @include color-link($grey, $dark-grey);
+    @include transition(color .2s);
+  }
+  li span {
+    display: none;
   }
 }
