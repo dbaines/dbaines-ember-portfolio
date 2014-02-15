@@ -4,8 +4,5 @@ Router.map(function() {
   this.route('component-test');
   this.route('helper-test');
   this.resource('project', { path: '/project/:id' });
-  // this.resource('posts', function() {
-  //   this.route('new');
-  // });
 });
 export default Router;

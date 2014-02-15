@@ -7,6 +7,7 @@
 @import "compass/css3/filter";
 
 $portfolio-gutter: 1px;
+$portfolio-stacked-gutter: 10px;
 
 // Hiding portfolio sections by default
 .portfolio_websites {
@@ -50,7 +51,7 @@ $portfolio-gutter: 1px;
   ul {
     @include pie-clearfix;
     clear: both;
-    margin: $portfolio-gutter;
+    margin-right: -($portfolio-gutter);
   }
 
   li {
@@ -64,7 +65,7 @@ $portfolio-gutter: 1px;
 
     @include media-query(small) {
       width: 100%;
-      padding-bottom: 5px;
+      padding-bottom: $portfolio-stacked-gutter;
     }
   }
 
@@ -123,9 +124,8 @@ $portfolio-gutter: 1px;
   }
 
   .portfolio--tile--thumbnail {
-    // todo: grunt crop process to automate thumbnail generation
-    height: 300px;
     width: 400px;
+    height: 300px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -140,7 +140,7 @@ $portfolio-gutter: 1px;
     @include opacity(0.2);
     @include transform(scale(1.4));
     @include transition(all .2s);
-    @include filter(blur(2px));
+    // @include filter(blur(2px));
   }
 
   &:hover .portfolio--tile--title {
@@ -220,6 +220,19 @@ $portfolio-gutter: 1px;
     img {
       display: block;
       margin: 0 auto;
+    }
+  }
+
+  .portfolio--meta {
+    float: right;
+    width: 25%;
+    color: $grey;
+    padding-left: $default-unit;
+    width: auto;
+
+    @include media-query(medium) {
+      float: none;
+      padding: 0 0 $default-unit 0;
     }
   }
 

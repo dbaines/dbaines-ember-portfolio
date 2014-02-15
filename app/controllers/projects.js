@@ -1,5 +1,1 @@
-var ProjectsController = Ember.ArrayController.extend({
-
-});
-
-export default ProjectsController;
+export default Ember.ArrayController.extend();

@@ -4,7 +4,7 @@
     {{#each}}
       <li>
         {{#link-to 'project' this class="portfolio--tile"}}
-          <img {{bind-attr src=this.imagePath}} class="portfolio--tile--thumbnail" />
+          <img {{bind-attr src=this.thumbnailPath}} class="portfolio--tile--thumbnail" />
           <span class="portfolio--tile--title">
             <strong>{{this.title}}</strong>
             {{#if this.tags}}
