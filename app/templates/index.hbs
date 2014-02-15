@@ -12,7 +12,8 @@
         {{#if isArtwork}}
           <li>
             {{#link-to 'project' this class="portfolio--tile"}}
-              {{this.title}}
+              <img {{bind-attr src=this.imagePath}} class="portfolio--tile--thumbnail" />
+              <span class="portfolio--tile--title">{{this.title}}</span>
             {{/link-to}}
           </li>
         {{/if}}
@@ -27,14 +28,10 @@
       {{#each}}
         {{#if isWebsite}}
           <li>
-            {{!--
-            <a href="#" {{action "goToProject" id}} class="portfolio--tile">
-              {{this.title}}
+             <a href="#" {{action "goToProject" id}} class="portfolio--tile">
+              <img {{bind-attr src=this.imagePath}} class="portfolio--tile--thumbnail" />
+              <span class="portfolio--tile--title">{{this.title}}</span>
             </a>
-             --}}
-            {{#link-to 'project' this class="portfolio--tile"}}
-              {{this.title}}
-            {{/link-to}}
           </li>
         {{/if}}
       {{/each}}

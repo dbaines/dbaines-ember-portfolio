@@ -1,5 +1,7 @@
 @import "compass/css3/box-shadow";
+@import "compass/css3/opacity";
 @import "compass/css3/transition";
+@import "compass/css3/transform";
 
 $portfolio-gutter: 1px;
 
@@ -59,7 +61,99 @@ $portfolio-gutter: 1px;
 .portfolio--tile {
   display: block;
   background: $dark-grey;
-  color: $white;
+  @include color-link($white,$white);
   height: 200px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
   @include transition(all .8s);
+
+  &:before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em;
+  }
+
+  .portfolio--tile--title {
+    position: relative;
+    z-index: 1;
+    font-size: 2em;
+    width: 100%;
+    padding: 0 1em;
+    @include font($bold-font);
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .portfolio--tile--thumbnail {
+    // todo: grunt crop process to automate thumbnail generation
+    height: 300px;
+    width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -200px;
+    z-index: 2;
+    @include transition(all .8s);
+    @include transform(scale(1));
+  }
+
+  &:hover .portfolio--tile--thumbnail {
+    @include opacity(0.1);
+    @include transform(scale(1.6));
+    @include transition(all .2s);
+  }
+}
+
+.portfolio_full {
+
+  h2 {
+    @include font($bold-font);
+    font-size: 3.5em;
+    margin: $large-unit 0;
+  }
+
+  .portfolio--bar {
+    background: $grey;
+    @include pie-clearfix;
+
+    li {
+      float: left;
+      border: 1px solid $background-color;
+      border-width: 0 1px 0 0;
+
+      a {
+        display: block;
+        text-align: center;
+        width: $button-width;
+        line-height: $button-width;
+        @include font($bold-font);
+      }
+    }
+
+    li.portfolio--close {
+      float: right;
+      border-width: 0 0 0 1px;
+    }
+  }
+
+  .portfolio--images {
+    background: $dark-grey;
+    text-align: center;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .portfolio--description {
+    background: $white;
+    color: $foreground-color;
+    padding: $large-unit;
+  }
+
 }

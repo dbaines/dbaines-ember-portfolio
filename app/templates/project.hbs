@@ -1,18 +1,35 @@
-<div class="project_full">
-  <h2 class="heading-two">{{title}}</h2>
-  <nav class="project--bar">
+<div class="portfolio_full">
+  <h2 class="heading-two">{{title}} {{hasNext}}</h2>
+  <nav class="portfolio--bar">
     <ul>
-      <li><a href="#">Previous</a></li>
-      <li><a href="#">Next</a></li>
-      <li class="project--close"><a href="#">Close project</a></li>
+      <li><a href="#" {{action "goToNext" id}} title="Previous project"><</a></li>
+      <li><a href="#" {{action "goToNext" id}} title="Next project">></a></li>
+      <li class="portfolio--close"><a href="#" {{action "goHome"}} title="Close project">x</a></li>
     </ul>
   </nav>
-  <div class="project--container">
-    <div class="project--images">
-      {{outlet}}
+  <div class="portfolio--container">
+    <div class="portfolio--images">
+      <div class="fotorama" data-width="100%" data-nav="thumbs" data-loop="true" data-max-height="800">
+
+        <img {{bind-attr src=imagePath}} />
+        {{#if images}}
+          {{#each images}}
+            <img {{bind-attr src=this}} />
+          {{/each}}
+        {{/if}}
+      </div>
     </div>
-    <div class="project--description">
-      {{description}}
-    </div>
+    {{#if description}}
+      <div class="portfolio--description">
+        {{description}}
+      </div>
+    {{/if}}
   </div>
+  <nav class="portfolio--bar">
+    <ul>
+      <li><a href="#" {{action "goToNext" id}} title="Previous project"><</a></li>
+      <li><a href="#" {{action "goToNext" id}} title="Next project">></a></li>
+      <li class="portfolio--close"><a href="#" {{action "goHome"}} title="Close project">x</a></li>
+    </ul>
+  </nav>
 </div>
