@@ -63,7 +63,7 @@ $portfolio-stacked-gutter: 10px;
       width: 50%;
     }
 
-    @include media-query(small) {
+    @include media-query(440px) {
       width: 100%;
       padding-bottom: $portfolio-stacked-gutter;
     }
