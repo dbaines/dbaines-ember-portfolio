@@ -136,10 +136,41 @@ $portfolio-gutter: 1px;
 
 .portfolio_full {
 
-  h2 {
+  .porfolio--header {
     @include font($bold-font);
-    font-size: 3.5em;
     margin: $large-unit 0 $xx-large-unit;
+    position: relative;
+
+    h2 {
+      font-size: 3.5em;
+      text-align: center;
+      padding: 0 70px;
+      line-height: 0.9em;
+    }
+
+    .portfolio--nav {
+      position: absolute;
+      top: 50%;
+      margin-top: -6px;
+      font-size: 1.5em;
+
+      span {
+        display: none;
+      }
+
+      &:hover span {
+        display: block;
+      }
+
+    }
+
+    .porfolio--prev {
+      left: 0;
+    }
+
+    .portfolio--next {
+      right: 0;
+    }
   }
 
   .portfolio--bar {
