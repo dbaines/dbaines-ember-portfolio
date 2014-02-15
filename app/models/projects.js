@@ -68,7 +68,7 @@ Projects.FIXTURES = [
     title: "Gary's Best Price",
     tags: "website",
     description: null,
-    image_src: "garysbestprice.jpg",
+    image_src: "garysbestprice_01.png",
     images: null
   },
   {
@@ -76,7 +76,7 @@ Projects.FIXTURES = [
     title: "Christine's Massage",
     tags: "website",
     description: null,
-    image_src: "christinesmassage.jpg",
+    image_src: "christinesmassage_01.png",
     images: null
   },
   {
@@ -84,15 +84,23 @@ Projects.FIXTURES = [
     title: "Steel Blue Zebra",
     tags: "website",
     description: null,
-    image_src: "steel-blue-zebra.jpg",
-    images: null
+    image_src: "steelbluezebra_01.jpg",
+    images: [
+      "/assets/projects/steelbluezebra_02.jpg",
+      "/assets/projects/steelbluezebra_03.jpg"
+    ]
   },
   {
     id: "co-opp",
     title: "Co-Opp",
     tags: "wordpress events engine",
     description: null,
-    image_src: "co-opp.jpg"
+    image_src: "co-opp-stack.jpg",
+    images: [
+      "/assets/projects/co-opp_profile.jpg",
+      "/assets/projects/co-opp_profile-stacks.jpg",
+      "/assets/projects/co-opp_mini-stack.jpg"
+    ]
   },
   {
     id: "what-style-am-i",

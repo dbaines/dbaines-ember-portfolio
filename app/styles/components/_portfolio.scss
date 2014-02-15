@@ -4,6 +4,7 @@
 @import "compass/css3/transition";
 @import "compass/css3/transform";
 @import "compass/css3/columns";
+@import "compass/css3/filter";
 
 $portfolio-gutter: 1px;
 
@@ -130,23 +131,26 @@ $portfolio-gutter: 1px;
     margin-top: -150px;
     margin-left: -200px;
     z-index: 2;
-    @include transition(all .8s);
+    @include transition(all .2s);
     @include transform(scale(1));
-
-    .touch & {
-      @include opacity(0.1);
-      @include transform(scale(1.6));
-    }
   }
 
   &:hover .portfolio--tile--thumbnail {
-    @include opacity(0.1);
-    @include transform(scale(1.6));
+    @include opacity(0.2);
+    @include transform(scale(1.4));
     @include transition(all .2s);
+    @include filter(blur(2px));
   }
 
   &:hover .portfolio--tile--title {
     display: inline-block;
+  }
+
+  .touch & .portfolio--tile--thumbnail,
+  .touch &:hover .portfolio--tile--thumbnail {
+    @include opacity(0.2);
+    @include transform(scale(1));
+    @include filter(blur(0));
   }
 }
 
@@ -162,6 +166,10 @@ $portfolio-gutter: 1px;
       text-align: center;
       padding: 0 70px;
       line-height: 0.9em;
+
+      @include media-query(small) {
+        font-size: 2em;
+      }
     }
 
     .portfolio--nav {
@@ -219,6 +227,10 @@ $portfolio-gutter: 1px;
     line-height: 1.8em;
     @include columns(20em 2);
     @include column-gap($default-unit);
+
+    @include media-query(small) {
+      font-size: 1em;
+    }
 
     p {
       margin-bottom: 0.5em;
