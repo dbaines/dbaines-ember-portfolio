@@ -1,15 +1,46 @@
-# humanstxt.org/
-# The humans responsible & technology colophon
 
-# TEAM
+                ..
+                .N .                                   .$
+                 OM.           ...                     .M
+                .=M$           MMMMMMO                =M$
+                  MM+.      .,MMMMMMMMMN.           .,MM:
+                  DMMN.     ~MMM..~MMMMMM .       . $MMM
+                  =MMM8     MMMM~:MM8++ZMD..     . 7MMMM
+                   MMMMM.   MMMMMMZ.      7     . MMMMM?
+                   ~MMMMM. .7MMMMM~              MMMMMI.
+                     ,MMMMO .8MMMMM. .         .MMMM=
+                        ZMMD .NMMMMM+ .       $MMD.
+                         ..NM  .MMMMMM7 .    OM=
+                             .   MMMMMMMN  .,
+                         .         MMMMMMMD   .  . .
+     . .      .. .,:=+I$8DMZ.       7MMMMMM8  IMN8OI+=:,..      . ..~
+       $MMMMMMMMMMMMMMMMM..           MMMMMM.    NMMMMMMMMMMMMMMMMM.
+          ?MMMMMMMMMMM,.               MMMMM.     ..MMMMMMMMMMMN
+            . I8MN7..                  =MMMM           ~DMM7
+                .       . +            $MMMI. .M..
+                      . .MM.          .MMMM..  MM:..
+                       ZMMM.          MMM?.    OMMM..
+                     :MMMMO          :MM:.      MMMM?.
+                                    :MM
+                                    M$
+                                  .M
+                                 .+
+                                 .
 
-    <name> -- <role> -- <twitter>
 
-# THANKS
+============================================================================
 
-    <name>
+  dBaines.com
 
-# TECHNOLOGY COLOPHON
+============================================================================
 
-    HTML5, CSS3
-    Ember.js
+Yo, the source for this whole thang is avialable for free on github:
+http://github.com/dbaines
+
+Technologies used:
+  * EmberJS and the Ember App Kit
+  * Modernizr
+  * Fotorama
+  * IcoMoon icon font
+  * Roboto Slab font
+  * ASCII by GlassGiant.com

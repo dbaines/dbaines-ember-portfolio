@@ -64,6 +64,7 @@ $portfolio-gutter: 1px;
 
     @include media-query(small) {
       width: 100%;
+      padding-bottom: 5px;
     }
   }
 
