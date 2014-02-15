@@ -5,14 +5,41 @@
 </nav>
 <div class="grid portfolio">
 
-  <ul>
-    {{#each}}
-      <li>
-        <a href="#" {{action "goToProject" id}} class="portfolio--tile">
-          {{this.name}}
-        </a>
-      </li>
-    {{/each}}
-  </ul>
+  <div id="portfolio_artwork">
+
+    <ul>
+      {{#each}}
+        {{#if isArtwork}}
+          <li>
+            {{#link-to 'project' this class="portfolio--tile"}}
+              {{this.title}}
+            {{/link-to}}
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+
+  </div>
+
+  <div id="portfolio_websites">
+
+    <ul>
+      {{#each}}
+        {{#if isWebsite}}
+          <li>
+            {{!--
+            <a href="#" {{action "goToProject" id}} class="portfolio--tile">
+              {{this.title}}
+            </a>
+             --}}
+            {{#link-to 'project' this class="portfolio--tile"}}
+              {{this.title}}
+            {{/link-to}}
+          </li>
+        {{/if}}
+      {{/each}}
+    </ul>
+
+  </div>
 
 </div>

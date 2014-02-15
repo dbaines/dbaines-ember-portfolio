@@ -3,6 +3,11 @@
 
 $portfolio-gutter: 1px;
 
+// Hiding portfolio sections by default
+.portfolio_websites {
+  display: none;
+}
+
 // Portfolio filter selection
 .portfolio-nav {
   ul {
