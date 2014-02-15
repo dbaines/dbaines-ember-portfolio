@@ -1,42 +1,19 @@
-<nav class="portfolio-nav">
-  <ul>
-    <li><a href="#">Websites</a></li><li><a href="#">Artwork</a></li>
-  </ul>
-</nav>
 <div class="grid portfolio">
 
-  <div id="portfolio_artwork">
-
-    <ul>
-      {{#each}}
-        {{#if isArtwork}}
-          <li>
-            {{#link-to 'project' this class="portfolio--tile"}}
-              <img {{bind-attr src=this.imagePath}} class="portfolio--tile--thumbnail" />
-              <span class="portfolio--tile--title">{{this.title}}</span>
-            {{/link-to}}
-          </li>
-        {{/if}}
-      {{/each}}
-    </ul>
-
-  </div>
-
-  <div id="portfolio_websites">
-
-    <ul>
-      {{#each}}
-        {{#if isWebsite}}
-          <li>
-             <a href="#" {{action "goToProject" id}} class="portfolio--tile">
-              <img {{bind-attr src=this.imagePath}} class="portfolio--tile--thumbnail" />
-              <span class="portfolio--tile--title">{{this.title}}</span>
-            </a>
-          </li>
-        {{/if}}
-      {{/each}}
-    </ul>
-
-  </div>
+  <ul>
+    {{#each}}
+      <li>
+        {{#link-to 'project' this class="portfolio--tile"}}
+          <img {{bind-attr src=this.imagePath}} class="portfolio--tile--thumbnail" />
+          <span class="portfolio--tile--title">
+            <strong>{{this.title}}</strong>
+            {{#if this.tags}}
+              <small>{{this.tags}}</small>
+            {{/if}}
+          </span>
+        {{/link-to}}
+      </li>
+    {{/each}}
+  </ul>
 
 </div>

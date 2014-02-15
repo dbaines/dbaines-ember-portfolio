@@ -2,16 +2,18 @@
   <h2 class="heading-two">{{title}} {{hasNext}}</h2>
   <nav class="portfolio--bar">
     <ul>
-      <li><a href="#" {{action "goToNext" id}} title="Previous project"><</a></li>
-      <li><a href="#" {{action "goToNext" id}} title="Next project">></a></li>
-      <li class="portfolio--close"><a href="#" {{action "goHome"}} title="Close project">x</a></li>
+      <li><a href="#" {{action "goToNext" id}} title="Previous project">< prev</a></li>
+      <li><a href="#" {{action "goToNext" id}} title="Next project">next ></a></li>
+      <li class="portfolio--close"><a href="#" {{action "goHome"}} title="Close project">x close</a></li>
     </ul>
   </nav>
   <div class="portfolio--container">
     <div class="portfolio--images">
       <div class="fotorama" data-width="100%" data-nav="thumbs" data-loop="true" data-max-height="800">
 
-        <img {{bind-attr src=imagePath}} />
+        {{#if image_src}}
+          <img {{bind-attr src=imagePath}} />
+        {{/if}}
         {{#if images}}
           {{#each images}}
             <img {{bind-attr src=this}} />
@@ -27,9 +29,9 @@
   </div>
   <nav class="portfolio--bar">
     <ul>
-      <li><a href="#" {{action "goToNext" id}} title="Previous project"><</a></li>
-      <li><a href="#" {{action "goToNext" id}} title="Next project">></a></li>
-      <li class="portfolio--close"><a href="#" {{action "goHome"}} title="Close project">x</a></li>
+      <li><a href="#" {{action "goToNext" id}} title="Previous project">< prev</a></li>
+      <li><a href="#" {{action "goToNext" id}} title="Next project">next ></a></li>
+      <li class="portfolio--close"><a href="#" {{action "goHome"}} title="Close project">x close</a></li>
     </ul>
   </nav>
 </div>

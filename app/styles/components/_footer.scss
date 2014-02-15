@@ -1,0 +1,15 @@
+.footer-links {
+  margin: $xx-large-unit auto;
+  text-align: center;
+
+  li {
+    display: inline;
+  }
+  li a {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: #bada55;
+    text-indent: -9999px;
+  }
+}
