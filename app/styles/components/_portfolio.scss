@@ -225,6 +225,10 @@ $portfolio-stacked-gutter: 10px;
 
   .portfolio--video {
     background: $dark-grey;
+
+    video {
+      max-width: 100%;
+    }
   }
 
   .portfolio--meta {
