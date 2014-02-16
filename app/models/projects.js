@@ -31,9 +31,11 @@ var Projects = DS.Model.extend({
   videoWebM: function(){
     return "/assets/video/" + this.get("video") + ".webm";
   }.property("video"),
-
   videoOggV: function(){
     return "/assets/video/" + this.get("video") + ".ogv";
+  }.property("video"),
+  videoMP4: function(){
+    return "/assets/video/" + this.get("video") + ".mp4";
   }.property("video")
 });
 
