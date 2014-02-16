@@ -7,16 +7,26 @@
   </div>
   <div class="portfolio--container">
     <div class="portfolio--images">
-      <div class="fotorama" data-width="100%" data-nav="thumbs" data-loop="true" data-max-height="800" data-fit="scaledown" data-arrows="false" data-allowfullscreen="true">
-        {{#if image_src}}
-          <img {{bind-attr src=imagePath}} />
-        {{/if}}
-        {{#if images}}
-          {{#each images}}
-            <img {{bind-attr src=this}} />
-          {{/each}}
-        {{/if}}
-      </div>
+      {{#if video}}
+        <div class="portfolio--video">
+          <video controls>
+            <source {{bind-attr src=videoWebM}} type="video/webm">
+            <source {{bind-attr src=videoOggV}} type="video/ogg">
+            <img {{bind-attr src=imagePath}} />
+          </video>
+        </div>
+      {{else}}
+        <div class="fotorama" data-width="100%" data-nav="thumbs" data-loop="true" data-max-height="800" data-fit="scaledown" data-arrows="false" data-allowfullscreen="true">
+          {{#if image_src}}
+            <img {{bind-attr src=imagePath}} />
+          {{/if}}
+          {{#if images}}
+            {{#each images}}
+              <img {{bind-attr src=this}} />
+            {{/each}}
+          {{/if}}
+        </div>
+      {{/if}}
     </div>
     {{#if agency}}
       <div class="portfolio--meta">

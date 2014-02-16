@@ -7,6 +7,7 @@ var Projects = DS.Model.extend({
   image_src: DS.attr('string'),
   images: DS.attr('array'),
   agency: DS.attr('string'),
+  video: DS.attr('string'),
 
   imagePath: function(){
     var image_src = this.get("image_src");
@@ -25,7 +26,15 @@ var Projects = DS.Model.extend({
     } else {
       return "/assets/projects/thumbnails/" + thumb_src;
     }
-  }.property("thumbnail_src", "imagePath")
+  }.property("thumbnail_src", "imagePath"),
+
+  videoWebM: function(){
+    return "/assets/video/" + this.get("video") + ".webm";
+  }.property("video"),
+
+  videoOggV: function(){
+    return "/assets/video/" + this.get("video") + ".ogv";
+  }.property("video")
 });
 
 Projects.FIXTURES = [
@@ -170,7 +179,8 @@ Projects.FIXTURES = [
     description: null,
     image_src: "demon-soul.jpg",
     thumbnail_src: "demon-soul.jpg",
-    images: null
+    images: null,
+    video: "demon-soul"
   },
   {
     id: "city-race",
@@ -179,7 +189,8 @@ Projects.FIXTURES = [
     description: null,
     image_src: "city-race.jpg",
     thumbnail_src: "city-race.jpg",
-    images: null
+    images: null,
+    video: "city-race"
   },
   {
     id: "bella-textiles",
