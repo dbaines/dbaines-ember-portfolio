@@ -36,15 +36,7 @@ var Projects = DS.Model.extend({
   }.property("video"),
   videoMP4: function(){
     return "/assets/video/" + this.get("video") + ".mp4";
-  }.property("video"),
-
-  numId: function(){
-    if(typeof(i) == "undefined"){
-      var i = 0;
-    }
-    var i++;
-    return i;
-  }
+  }.property("video")
 
 });
 
