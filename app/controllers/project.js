@@ -1,5 +1,17 @@
 var ProjectController = Ember.ObjectController.extend({
   needs: ["projects"],
+
+  // assignIndex: function () {
+  //   this.map(function (item, index) {
+  //     console.log(item, index);
+  //     Ember.set(item, 'index', index + 1);
+  //   });
+  // }.observes('content.[]', 'firstObject', 'lastObject'),
+
+  itemCount: function() {
+    return this.get('length');
+  }.property('@each'),
+
   advanceProject: function(delta) {
     var index,length,projects,currentIndex;
 
@@ -10,6 +22,7 @@ var ProjectController = Ember.ObjectController.extend({
 
     return this.transitionToRoute('project', projects.objectAt(1));
   },
+
   actions: {
     previous: function(){
       return this.advanceProject(+1);

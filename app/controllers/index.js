@@ -1,4 +1,5 @@
 var IndexController = Ember.ArrayController.extend({
+
   actions: {
     goToProject: function(id){
 

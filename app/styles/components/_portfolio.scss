@@ -205,7 +205,7 @@ $portfolio-stacked-gutter: 10px;
     // @include box-shadow(0 0 10px rgba(0,0,0,0.2));
 
     .fotorama__stage {
-      background: $dark-grey;
+      background: $med-grey;
     }
 
     .fotorama__nav-wrap {
@@ -224,7 +224,7 @@ $portfolio-stacked-gutter: 10px;
   }
 
   .portfolio--video {
-    background: $dark-grey;
+    background: $med-grey;
 
     video {
       max-width: 100%;

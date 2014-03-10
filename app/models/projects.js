@@ -36,7 +36,16 @@ var Projects = DS.Model.extend({
   }.property("video"),
   videoMP4: function(){
     return "/assets/video/" + this.get("video") + ".mp4";
-  }.property("video")
+  }.property("video"),
+
+  numId: function(){
+    if(typeof(i) == "undefined"){
+      var i = 0;
+    }
+    var i++;
+    return i;
+  }
+
 });
 
 Projects.FIXTURES = [
@@ -162,9 +171,7 @@ Projects.FIXTURES = [
     title: "What Style Am I?",
     tags: "website",
     agency: "CDAA Pty Ltd",
-    description:
-      "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, tempora, ex maiores nisi rem itaque dolor alias sed illo nulla eius quos officia non ipsum labore voluptatibus at sint.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, tempora, ex maiores nisi rem itaque dolor alias sed illo nulla eius quos officia non ipsum labore voluptatibus at sint.</p>"
-    ,
+    description: "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, tempora, ex maiores nisi rem itaque dolor alias sed illo nulla eius quos officia non ipsum labore voluptatibus at sint.</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat, accusamus, tempora, ex maiores nisi rem itaque dolor alias sed illo nulla eius quos officia non ipsum labore voluptatibus at sint.</p>",
     image_src: "what_style_01.jpg",
     thumbnail_src: "what_style_01.jpg",
     images: [
