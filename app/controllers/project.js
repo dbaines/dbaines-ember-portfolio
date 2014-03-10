@@ -20,15 +20,15 @@ var ProjectController = Ember.ObjectController.extend({
     currentIndex = projects.indexOf(this.get('content'));
     index = (currentIndex + delta + length) % length;
 
-    return this.transitionToRoute('project', projects.objectAt(1));
+    return this.transitionToRoute('project', projects.objectAt(index));
   },
 
   actions: {
     previous: function(){
-      return this.advanceProject(+1);
+      return this.advanceProject(-1);
     },
     next: function(){
-      return this.advanceProject(-1);
+      return this.advanceProject(+1);
     },
     goHome: function(){
       this.transitionToRoute("/");
