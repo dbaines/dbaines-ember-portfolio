@@ -4,7 +4,9 @@ export default Ember.Route.extend({
       model: model,
       projects: this.store.find('projects')
     });
+    $(".gallery").not(".gallery_init").fotorama().addClass(".gallery_init");
   },
+
   model: function(params) {
     return this.store.find('projects', params.id);
   },

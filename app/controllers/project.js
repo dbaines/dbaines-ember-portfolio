@@ -5,7 +5,7 @@ var ProjectController = Ember.ObjectController.extend({
   //   this.map(function (item, index) {
   //     console.log(item, index);
   //     Ember.set(item, 'index', index + 1);
-  //   });
+  //   }); 
   // }.observes('content.[]', 'firstObject', 'lastObject'),
 
   itemCount: function() {
